@@ -1,2 +1,2 @@
 # Data-Structures
-Basic implementation for some graphs
+Basic implementation of some graphs
