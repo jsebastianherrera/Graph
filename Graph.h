@@ -4,27 +4,29 @@
 #include <list>
 #include <vector>
 #include <iostream>
-template <class T>
+template <class T, class C>
 class Graph
 {
 private:
     std::vector<T> vertex;
-    int **adjacency_matrix;
+    std::vector<std::vector<T>> cost_matrix;
+    // int **adjacency_matrix;
 
 public:
-    Graph();
+    //Graph();
     std::vector<T> getVertex();
-    int **getAdjacency_matrix();
-    //Retorn count vertex
+    std::vector<std::vector<C>> getCost_matrix();
     int count_vertex();
-    //Retorn count edges
     int count_edges();
-    //Insert vertex
     bool insert_vertex(T);
     bool search_vertex(T);
+    bool search_edge(T, T);
+    bool remove_edge(T, T);
+    C getCostByEdge(T, T);
     int getPositionByVertex(T);
-    bool insert_edge(T, T);
-    void print_adjacency_matrix();
+    bool insert_edge(T, T, C);
+    bool remove_vertex(T);
+    void print_cost_matrix();
 };
 #include "Graph.hxx"
 #endif
