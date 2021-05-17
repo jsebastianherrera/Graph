@@ -26,6 +26,7 @@ public:
     int getPositionByVertex(T);
     bool insert_edge(T, T, C);
     bool remove_vertex(T);
+    void planar_path();
     void print_cost_matrix();
 };
 #include "Graph.hxx"

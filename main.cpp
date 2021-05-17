@@ -16,7 +16,8 @@ int main(void)
     g.insert_edge(4, 2, 5);
     g.insert_edge(4, 3, 6);
     g.print_cost_matrix();
-    g.remove_vertex(4);
+    g.remove_vertex(3);
     g.remove_edge(3, 1);
     g.print_cost_matrix();
+    g.planar_path();
 }

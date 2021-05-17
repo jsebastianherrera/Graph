@@ -149,3 +149,10 @@ bool Graph<T, C>::remove_edge(T origin, T destination)
     }
     return false;
 }
+template <class T, class C>
+void Graph<T, C>::planar_path()
+{
+    for (int j = 0; j < this->count_vertex() - 1; j++)
+        std::cout << this->vertex[j] << ",";
+    std::cout << this->vertex[this->count_vertex() - 1] << std::endl;
+}
